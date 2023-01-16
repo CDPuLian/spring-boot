@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.my.boot.dao.UserDao">
+
+    <resultMap type="com.scu.springboot.demo.entity.User" id="UserMap">
+        <result property="userName" column="user_name" jdbcType="VARCHAR"/>
+        <result property="password" column="password" jdbcType="VARCHAR"/>
+        <result property="email" column="email" jdbcType="VARCHAR"/>
+        <result property="phoneNumber" column="phone_number" jdbcType="VARCHAR"/>
+        <result property="type" column="type" jdbcType="INT"/>
+        <result property="usersId" column="users_id" jdbcType="INT"/>
+        <result property="location" column="location" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--新增用户-->
+    <insert id="insert" keyProperty="userId" useGeneratedKeys="true">
+        insert into pulian.users(user_name, password, email, phone_number, type, users_id, location)
+        values (#{userName}, #{password}, #{email}, #{phoneNumber}, #{type}, #{usersId}, #{location})
+    </insert>
+
+</mapper>

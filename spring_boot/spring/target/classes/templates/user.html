@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--新增/修改表单-->
+<div id="addOrUpdateUser" style="display: none;padding: 40px;">
+    <form class="layui-form" lay-filter="addOrUpdateUserForm" id="addOrUpdateUserForm">
+        <div class="layui-form-item">
+            <label class="layui-form-label">用户名</label>
+            <div class="layui-input-block">
+                <input type="text" name="userAccount" lay-verify="required" placeholder="请输入用户名"  class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">用户密码</label>
+            <div class="layui-input-block">
+                <input type="text" name="userPassword" lay-verify="required" placeholder="请输入用户密码"  class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">用户类型</label>
+            <div class="layui-input-block">
+                <select name="authorityId" lay-search>
+                    <option value="" selected>请选择用户类型</option>
+                    <option value="1">普通用户</option>
+                    <option value="2">管理员</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item" style="margin-top: 100px;margin-left: 40px;">
+            <div class="layui-input-block">
+                <button type="button" class="layui-btn layui-btn-normal" lay-submit lay-filter="doAddOrUpdateUser"><i class="layui-icon layui-icon-addition"></i> 提交</button>
+                <button type="button" class="layui-btn layui-btn-normal" id="cancel"><i class="layui-icon layui-icon-close"></i> 取消</button>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>
