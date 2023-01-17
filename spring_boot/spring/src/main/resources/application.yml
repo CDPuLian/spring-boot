@@ -1,0 +1,34 @@
+server:
+  port: 8080
+  servlet:
+   context-path: /
+  tomcat:
+    #?????
+    max-threads: 1000
+    #?????
+    max-connections: 20000
+    #??????(TCP)
+    accept-count: 8000
+    uri-encoding: UTF-8
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true  # ??????
+  mapper-locations: classpath:mapper/*.xml
+spring:
+  #???
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/doc?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC
+
+  devtools:
+    #?????,????true
+    restart:
+      enabled: true
+#logback:
+#logging:
+#  level:
+#    com.scu.springboot.demo: debug
+#  #????????
+#  config: classpath:logback-spring.xml

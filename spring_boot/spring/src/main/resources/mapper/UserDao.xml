@@ -2,13 +2,13 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.my.boot.dao.UserDao">
 
-    <resultMap type="com.scu.springboot.demo.entity.User" id="UserMap">
+    <resultMap type="com.my.boot.entity.User" id="UserMap">
         <result property="userName" column="user_name" jdbcType="VARCHAR"/>
         <result property="password" column="password" jdbcType="VARCHAR"/>
         <result property="email" column="email" jdbcType="VARCHAR"/>
         <result property="phoneNumber" column="phone_number" jdbcType="VARCHAR"/>
-        <result property="type" column="type" jdbcType="INT"/>
-        <result property="usersId" column="users_id" jdbcType="INT"/>
+        <result property="type" column="type" jdbcType="INTEGER"/>
+        <result property="usersId" column="users_id" jdbcType="INTEGER"/>
         <result property="location" column="location" jdbcType="VARCHAR"/>
     </resultMap>
 
